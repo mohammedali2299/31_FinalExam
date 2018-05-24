@@ -74,7 +74,7 @@ def problem3(point, circle1, circle2, window):
             -- one from the center of circle1 to the center of circle2
             -- one from the center of circle2 to the given rg.Point
          where the color of each of those lines is the same color
-         as the fill color of circle2.
+         as the fill color of circle1.
       -- Then draws 3 more rg.Lines:
             -- one from the midpoint of the 1st line above
                  to the midpoint of the 2nd line above
