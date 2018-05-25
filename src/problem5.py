@@ -136,7 +136,7 @@ def problem5(m, numbers1, numbers2):
       :type [str]
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # done: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
     new = []
