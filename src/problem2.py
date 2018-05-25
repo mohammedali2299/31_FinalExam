@@ -19,8 +19,8 @@ def main():
     print()
     print('Un-comment the calls in MAIN one by one')
     print(' to run the testing code as you complete the TODOs.')
-    #run_test_problem2a()
-    #run_test_problem2b()
+    run_test_problem2a()
+    run_test_problem2b()
     run_test_problem2c()
 
 
@@ -259,8 +259,11 @@ def problem2b(sequence):
     # -------------------------------------------------------------------------
     max = 0
     for k in range(len(sequence)):
-        if abs(sequence[k]) > max:
-            max = k
+        if sequence[k] < 0:
+            sequence[k] = -(sequence[k])
+        for l in range(len(sequence)-1):
+            if sequence[max] > sequence[l]:
+                max = l
     return max
 
 
@@ -405,9 +408,11 @@ def problem2c(x):
     # TODO: 4. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
-    while is_prime(x) != True & is_prime(sum_of_digits(x)) != True:
-       x += 1
-    return x
+    while True:
+        if is_prime(x) == True:
+            if is_prime(sum_of_digits(x)) == True:
+                return x
+        x = x + 1
 
 ###############################################################################
 # Our tests use the following to print error messages in red.

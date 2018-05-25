@@ -87,7 +87,7 @@ And this one for n=14:
     #   print Xs for the spaces until you figure out where the problem is
     #   (and then change the Xs back to spaces).
     # ------------------------------------------------------------------
-
+    for k in range(n)
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.

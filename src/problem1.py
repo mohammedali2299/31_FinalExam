@@ -19,7 +19,7 @@ def main():
     print()
     print('Un-comment the calls in MAIN one by one')
     print(' to run the testing code as you complete the TODOs.')
-    #run_test_problem1a()
+    run_test_problem1a()
     run_test_problem1b()
 
 
@@ -96,8 +96,9 @@ def problem1a(numbers):
 
     first = numbers[0]
     last = numbers[len(numbers)-1]
-    middle = numbers[int(len(numbers))/2]
-    return first + middle + last
+    middle = numbers[(len(numbers)-1)//2]
+    sum = first + middle + last
+    return sum
 
 def run_test_problem1b():
     """ Tests the  problem1b   function. """
