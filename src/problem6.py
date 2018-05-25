@@ -88,7 +88,7 @@ And this one for n=14:
     #   (and then change the Xs back to spaces).
     # ------------------------------------------------------------------
     for k in range(n):
-        for j in range(n+2):
+        for j in range(k):
             print(" ", k+1, "*", end="")
 
 
