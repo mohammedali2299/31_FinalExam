@@ -2,9 +2,9 @@
 Final exam, problem 3.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  May 2018.
+         their colleagues and mohammed ali.  May 2018.
 
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 import time
@@ -93,11 +93,31 @@ def problem3(point, circle1, circle2, window):
       :type window:    rg.RoseWindow
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # done: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # ------------------------------------------------------------------
-
-
+    circle1.attach_to(window)
+    circle2.attach_to(window)
+    point.attach_to(window)
+    line1 = rg.Line(point, circle1.center)
+    line1.attach_to(window)
+    line2 = rg.Line(circle1.center, circle2.center)
+    line2.attach_to(window)
+    line3 = rg.Line(circle2.center, point)
+    line3.attach_to(window)
+    line4x1 = (line1.start.x + line1.end.x)/2
+    line4y1 = (line1.start.y + line1.end.y)/2
+    line4x2 = (line2.start.x + line2.end.x) / 2
+    line4y2 = (line2.start.y + line2.end.y) / 2
+    line4 = rg.Line(rg.Point(line4x1, line4y1), rg.Point(line4x2, line4y2))
+    line4.attach_to(window)
+    line5x = (line3.start.x + line3.end.x) / 2
+    line5y = (line3.start.y + line3.end.y) / 2
+    line5 = rg.Line(rg.Point(line4x2, line4y2), rg.Point(line5x, line5y))
+    line5.attach_to(window)
+    line6 = rg.Line(rg.Point(line5x, line5y), rg.Point(line4x1, line4y1))
+    line6.attach_to(window)
+    window.render()
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # The   try .. except   prevents error messages on the console from being
